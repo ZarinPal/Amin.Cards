@@ -1,0 +1,37 @@
+@mixin centerer($horizontal: true, $vertical: true, $position: absolute) {
+  position: $position;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+//
+//
+// *** Variables ***
+// =================
+//
+// Everything need to know CSS
+// Global variables of all kinds
+//
+$version: '0.0.1';
+
+// Road: Typography
+$font-IranSans: "iransans";
+$font-IranSans-Persian-num: 'iransans-per-num';
+$font-light: $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+$font-Persian-num: $font-IranSans-Persian-num, iransans, Helvetica, Geneva, Verdana, sans-serif;
+
+// Colors
+$main-color: #00b8d4;
+
+// Responsive
+$standard-md-size: 970px;

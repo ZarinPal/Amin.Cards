@@ -1,0 +1,55 @@
+.bingo-slider {
+  .slider {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/img1.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: none;
+    z-index: -100;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    color: #fff;
+
+    .slider-content {
+      width: 80%;
+      @include centerer(true);
+      top: 75%;
+      h4 {
+        font-size: 25px;
+      }
+    }
+  }
+  .slider.active {
+    display: block;
+    animation: fading 0.5s;
+  }
+  .slider-selector {
+    position: absolute;
+    top: 87%;
+    left: 10%;
+  }
+}
+
+.slider-selector {
+  ul {
+    li {
+      float: left;
+      margin-right: 7px;
+      list-style: none;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    li:hover, li.active {
+      background: $main-color;
+    }
+  }
+}

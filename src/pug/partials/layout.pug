@@ -1,0 +1,29 @@
+// Created by Amin Keshavarz on 7/31/2017.
+block project-info
+    - var version     = '0.0.1alpha'
+
+doctype html
+html
+    head
+        meta(charset='utf8')
+        title بینگو -
+            | #{pageName}
+
+        // Page css assets
+        block css
+            link(rel='stylesheet' type="text/css" href ='assets/css/styles.css?ver=1.2.0')
+    body
+        // Header Template
+        include header.pug
+        // ./Header Template
+        // Page Content
+        block content
+        // ./Page Content
+        // Footer Template
+        include footer.pug
+        // ./Footer Template
+        // Page js assets
+        block style
+            script(src='assets/js/app.js')
+            script
+                |   Bingo.coverSlider("#bingo-intro-slider");

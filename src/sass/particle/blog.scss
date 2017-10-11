@@ -1,0 +1,152 @@
+.search-box {
+  margin-top: 50px;
+  display: flex;
+}
+
+.search-box input.search {
+  width: 100%;
+  border: transparent;
+  border-bottom: 2px solid #00b8d4;
+  padding: 10px 30px 10px 20px;
+  background: #fff url("../img/group.png") no-repeat 99%;
+  font-family: $font-light;
+}
+
+.post {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  .post-content {
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.post-summary {
+  padding: 50px 0;
+  border-bottom: 1px solid #ededed;
+
+  .post-content {
+    p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      text-align: justify;
+      margin-top: 0;
+    }
+    .bingo-btn {
+      float: left;
+    }
+  }
+}
+
+.blog {
+  .title {
+    padding-bottom: 10px;
+    h3 {
+      font-size: 25px;
+      margin-top: 5px;
+    }
+    .author {
+      display: inline-block;
+      margin-left: 20px;
+      color: #b3b3b3;
+    }
+    .author:after {
+      content: '|';
+      color: #b3b3b3;
+      margin-right: 13px;
+      font-weight: bold;
+    }
+    .date {
+      display: inline-block;
+      color: $main-color;
+      font-weight: bold;
+    }
+  }
+  .paging {
+    display: inline-block;
+    width: 100%;
+    ul {
+      float: left;
+      li {
+        float: right;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        list-style: none;
+        text-align: center;
+        font-weight: bold;
+        color: #b1b1b1;
+      }
+      li:hover {
+        border: 2px solid #00b8d4;
+        border-radius: 5px;
+        margin: 3px;
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
+  .share {
+    margin-top: 60px;
+    a, a:visited {
+      color: #757575;
+    }
+    a:hover, a:active {
+      color: $main-color;
+    }
+    .social {
+      font-size: 35px;
+      span {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.related-contents {
+  padding: 50px 0;
+  .row {
+    width: 120%;
+    margin: 50px -10%;
+
+    .content {
+      background: #fff;
+      display: inline-block;
+      overflow-y: hidden;
+      .img {
+        width: 30%;
+        float: right;
+        overflow: hidden;
+      }
+      .text {
+        padding: 15px 10px;
+        float: left;
+        width: 65%;
+        text-align: right;
+        h4 {
+          margin-top: 0;
+        }
+        .date {
+          font-weight: bold;
+          font-size: 14px;
+          color: $main-color;
+        }
+        p {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          text-align: justify;
+          margin-top: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
