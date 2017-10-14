@@ -52,19 +52,224 @@ section {
     list-style: none;
 
     li {
+      border-radius: 15px;
       float: right;
+      width: 40%;
+      min-height: 153px;
+      padding: 0;
+      margin: 30px auto;
+      cursor: pointer;
+      @include fadeAnim(0.3s);
+
+      .panel {
+        margin-right: 80px;
+
+        span {
+          background: $main-color;
+          border-radius: 50%;
+          color: $main-color;
+          margin-right: -25px;
+          margin-top: 5px;
+          position: absolute;
+          @include fadeAnim(0.3s);
+        }
+        span.fa:before {
+          content: "\f111";
+        }
+      }
     }
-  }
-  .active {
-    border-radius: 15px;
-    background-color: #fbfbff;
-    box-shadow: 0 5px 10px 0 rgba(2, 18, 34, 0.1);
+
+    li:nth-child(odd) {
+      clear: right;
+      margin-left: 25px;
+    }
+
+    li:nth-child(even) {
+      clear: left;
+      margin-right: 25px;
+    }
+
+    li:hover {
+      box-shadow: 0 5px 10px 0 rgba(2, 18, 34, 0.1);
+    }
+
+    li.active {
+      background-color: #fbfbff;
+      box-shadow: 0 5px 10px 0 rgba(2, 18, 34, 0.1);
+
+      .panel {
+        span {
+          color: #fff;
+          padding: 10px;
+          margin-right: -50px;
+          margin-top: -8px;
+        }
+        span.fa:before {
+          content: "\f021";
+        }
+      }
+    }
   }
 }
 
 #processes {
   background: #fbfbff;
+  padding-bottom: 150px;
+
   h3 {
     padding-top: 140px;
+  }
+
+  .row {
+    padding-top: 50px;
+    max-width: 95% !important;
+  }
+
+  .steps {
+    width: 25%;
+    float: right;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 40px;
+
+    .steps-pic {
+      background: #fff;
+      border-radius: 100%;
+      margin: 25px auto 55px;
+      width: 90px;
+      height: 90px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+      span.fa {
+        font-size: 34px;
+        float: left;
+        font-weight: 100;
+        margin-left: 50%;
+        margin-top: 50%;
+        transform: translate(-50%, -50%);
+        color: $main-color;
+      }
+    }
+  }
+
+  .steps:before {
+    content: "\f053";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    margin-top: 11.5%;
+    margin-right: 12%;
+  }
+  .steps:last-child:before {
+    content: none;
+  }
+}
+
+#brands {
+  padding: 70px;
+  h3 .btn {
+    margin-right: 115px;
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 50px;
+  }
+  h3 .btn:hover {
+    color: #ffffff;
+  }
+
+  .brands {
+    border-top: 2px solid #e5e9f1;
+    padding: 25px 15px;
+    margin: 75px auto 0;
+
+    .brand {
+      width: 16.666666666%;
+      box-sizing: border-box;
+      padding: 80px 10px;
+      float: right;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#page {
+  h2 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .row {
+    width: 80%;
+    margin-right: auto;;
+    margin-left: auto;;
+  }
+
+  #page-icon {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 139px;
+    font-size: 69px;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.1);
+    padding: 10.6px 32.68px;
+  }
+  #page-icon.fa:before {
+    background: -webkit-linear-gradient($main-color, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#about-us-page {
+  width: 80%;
+  margin: 0 auto;
+
+  p {
+    width: 80%;
+    margin: 0 auto 75px;
+  }
+}
+
+.panel {
+  background-color: #ffffff;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  border-radius: 10px;
+
+  .panel-header {
+    background: $main-color;
+    height: 54px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .panel-header.border-bottom-like-triangle:after {
+    border-left: 0 solid transparent;
+    border-right: 435px solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 30px solid #fff;
+  }
+  .panel-content {
+    padding: 1px 30px 30px;
+  }
+  span.fa {
+    float: right;
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 45px;
+    margin-top: 10px;
   }
 }

@@ -14,7 +14,7 @@ html
             link(rel='stylesheet' type="text/css" href ='assets/css/styles.css?ver=1.2.0')
     body
         // Header Template
-        if(pageName = "index")
+        if fileName == "index"
             include header-intro
         else
             include header
@@ -28,5 +28,3 @@ html
         // Page js assets
         block style
             script(src='assets/js/app.js')
-            script
-                |   Bingo.coverSlider("#bingo-intro-slider");

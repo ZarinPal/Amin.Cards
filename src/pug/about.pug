@@ -1,0 +1,51 @@
+extends partials/layout.pug
+block project-info
+    -var pageName = 'درباره ما'
+    -var fileName = 'about'
+block content
+    script
+        | function initMap() {
+        |    var uluru = {lat: 35.7286786, lng: 51.4034547};
+        |    var map = new google.maps.Map(document.getElementById('map'), {
+        |        zoom: 17,
+        | center: uluru
+        | });
+        | var marker = new google.maps.Marker({
+        |    position: uluru,
+        |    animation: google.maps.Animation.BOUNCE,
+        |    title: "ZarinPal Co",
+        |    map: map
+        | });
+        | }
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeACnKtvESiULBrraQxYQqZx6g1Jo1Ug&callback=initMap")
+    main#page
+        span#page-icon.fa.fa-info
+        h2  درباره زرین‌پال
+
+        div.row#about-us-page
+            p   ارائه‌دهنده کارت‌های پیش‌پرداخت شده‌ی ارزی مثل مسترکارت و ویزا کارت هست که به راحتی قابلیت این رو داره که هرچندبار که دوست داریم به ریال شارژ کنیم و به دلار خرید کنیم. دیگه نیازی به همراه داشتن پول نقد نیست و دردسر تبدیل پول براتون به لذت تبدیل میشه. در هرکجا که باشین و دسترسی به اینترنت هم داشته باشین، خیلی راحت، سریع و اَمن می‌تونید کارت‌تون رو با هر کارت شتابی به ریال شارژ کنید و به دلار خرج کنید. در هر نقطه از این کُره‌ی خاکی یا حتی در هر نقطه از اقیانوس‌ها!
+
+        div.row
+            div.col.col--md-5
+                div#contact-info.panel(style='margin-left:40px;')
+                    div.panel-header.border-bottom-like-triangle
+                    div.panel-content
+                        span.fa.fa-comment-o
+                        h3  اطلاعات تماس
+                        p   تلفن: ۴۱۲۳۹ ۰۲۱
+                        p   فکس: ۴۳۸۵۶۹۹۰ ۰۲۱
+                        p   نشانی:  تهران - یوسف آباد - کوچه بیستم - پلاک ۶۱ - واحد ۲
+                        p   کد پستی: ۱۴۳۱۹۶۵۳۷۱
+                        p   ساعات کاری: شنبه تا چهارشنبه
+                            br
+                            | از ساعت ۹ صبح الی ۵ بعد از ظهر.
+
+            div.col.col--md-7
+                div.panel(id='map' style="width:100%; background-color: grey; float:left; margin-right:20px;")
+
+    script
+        | let el = document.getElementById("contact-info");
+        | let map = document.getElementById("map");
+        | let h = el.clientHeight;
+        | console.log(h);
+        | map.style.height = h+"px";
