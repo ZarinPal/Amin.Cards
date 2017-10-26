@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="970" height="721" viewBox="0 0 970 721">
+    <defs>
+        <linearGradient id="circle1-a" x1="-20.872%" y1="116.592%" y2="0%">
+            <stop offset="0%" stop-color="#2541B2"/>
+            <stop offset="100%" stop-color="#38B8F2"/>
+        </linearGradient>
+        <filter id="circle1-b" width="116.7%" height="116.7%" x="-8.4%" y="-8.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5.804"/>
+        </filter>
+        <linearGradient id="circle1-c" x1="-32.119%" y1="133.056%" y2="0%">
+            <stop offset="0%" stop-color="#2541B2"/>
+            <stop offset="100%" stop-color="#38B8F2"/>
+        </linearGradient>
+        <filter id="circle1-d" width="113.2%" height="113.2%" x="-6.6%" y="-6.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6.314"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(16 14)">
+        <circle cx="836" cy="104" r="104" fill="url(#circle1-a)" filter="url(#circle1-b)" opacity=".56"/>
+        <circle cx="143" cy="548" r="143" fill="url(#circle1-c)" filter="url(#circle1-d)" opacity=".553"/>
+    </g>
+</svg>

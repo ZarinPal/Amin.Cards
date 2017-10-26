@@ -3,6 +3,7 @@
   border-radius: 20px;
   padding: 5px 20px;
   margin: 0 5px;
+  @include fadeAnim(0.3s);
 }
 
 .btn:hover {
@@ -140,14 +141,9 @@ section {
       height: 90px;
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
-      span.fa {
-        font-size: 34px;
-        float: left;
-        font-weight: 100;
-        margin-left: 50%;
+      img {
         margin-top: 50%;
-        transform: translate(-50%, -50%);
-        color: $main-color;
+        transform: translateY(-50%);
       }
     }
   }
@@ -199,6 +195,8 @@ section {
 }
 
 #page {
+  color: #424242;
+
   h2 {
     text-align: center;
     font-size: 36px;
@@ -211,16 +209,23 @@ section {
   }
 
   #page-icon {
-    margin: 0 auto;
     position: absolute;
+    width: 90px;
+    height: 90px;
     left: 50%;
     top: 139px;
-    font-size: 69px;
-    transform: translateX(-50%);
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.1);
-    padding: 10.6px 32.68px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    img {
+      margin-right: 50%;
+      margin-top: 50%;
+      -webkit-transform: translate(50%, -50%);
+      transform: translate(50%, -50%);
+    }
   }
   #page-icon.fa:before {
     background: -webkit-linear-gradient($main-color, #ffffff);
@@ -229,7 +234,7 @@ section {
   }
 }
 
-#about-us-page {
+.page-description {
   width: 80%;
   margin: 0 auto;
 
@@ -239,25 +244,62 @@ section {
   }
 }
 
-.panel {
+#prices {
+  background: #fbfbff;
+  padding: 100px 0;
+
+  h4 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+
+    thead th {
+      font-weight: 500;
+    }
+
+    tbody {
+      tr {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+      }
+      td {
+        border-radius: 5px;
+        background-color: #ffffff;
+        height: 56px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .row {
+    width: 65%;
+  }
+}
+
+.box {
   background-color: #ffffff;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
   margin: 15px;
   border-radius: 10px;
 
-  .panel-header {
+  .box-header {
     background: $main-color;
     height: 54px;
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
-  .panel-header.border-bottom-like-triangle:after {
+  .box-header.border-bottom-like-triangle:after {
     border-left: 0 solid transparent;
     border-right: 435px solid transparent;
     border-top: 0 solid transparent;
     border-bottom: 30px solid #fff;
   }
-  .panel-content {
+  .box-content {
     padding: 1px 30px 30px;
   }
   span.fa {

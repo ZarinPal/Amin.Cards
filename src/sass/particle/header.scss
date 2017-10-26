@@ -1,5 +1,5 @@
 html, body {
-  font-family: $font-Persian-num;
+  font-family: $font-IranYekan;
   text-align: right;
   margin: 0;
   direction: rtl;
@@ -21,7 +21,11 @@ a:hover, a:active {
 
 header {
   height: 250px;
-  background: $main-color;
+  background: #2486ff;
+  background-image: url(../img/circle1.svg), url(../img/circle2.svg), linear-gradient(80deg, #38b8f2, #2541b2);
+  background-position: 300px -25px, 30px 25px, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 65%, cover, 100%;
   color: #ffffff;
 
   a {

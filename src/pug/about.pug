@@ -19,7 +19,8 @@ block content
         | }
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeACnKtvESiULBrraQxYQqZx6g1Jo1Ug&callback=initMap")
     main#page
-        span#page-icon.fa.fa-info
+        span#page-icon
+            img(src="assets/img/information.svg")
         h2  درباره زرین‌پال
 
         div.row#about-us-page
@@ -27,9 +28,9 @@ block content
 
         div.row
             div.col.col--md-5
-                div#contact-info.panel(style='margin-left:40px;')
-                    div.panel-header.border-bottom-like-triangle
-                    div.panel-content
+                div#contact-info.box(style='margin-left:40px;')
+                    div.box-header.border-bottom-like-triangle
+                    div.box-content
                         span.fa.fa-comment-o
                         h3  اطلاعات تماس
                         p   تلفن: ۴۱۲۳۹ ۰۲۱
@@ -41,7 +42,7 @@ block content
                             | از ساعت ۹ صبح الی ۵ بعد از ظهر.
 
             div.col.col--md-7
-                div.panel(id='map' style="width:100%; background-color: grey; float:left; margin-right:20px;")
+                div.box(id='map' style="width:100%; background-color: grey; float:left; margin-right:20px;")
 
     script
         | let el = document.getElementById("contact-info");

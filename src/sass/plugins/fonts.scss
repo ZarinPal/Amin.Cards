@@ -77,3 +77,43 @@
   src: url('../fonts/iransans_pnumbers/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
   url('../fonts/iransans_pnumbers/IRANSansWeb_Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
+
+@font-face {
+  font-family: $font-IranYekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/iranyekan/iranyekanwebregular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/iranyekan/iranyekanwebregular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: $font-IranYekan;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/iranyekan/iranyekanweblight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/iranyekan/iranyekanweblight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: $font-IranYekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/iranyekan/iranyekanweblight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/iranyekan/iranyekanweblight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: $font-IranYekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/iranyekan/iranyekanwebbold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/iranyekan/iranyekanwebbold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: $font-IranYekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/iranyekan/iranyekanwebbold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/iranyekan/iranyekanwebbold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

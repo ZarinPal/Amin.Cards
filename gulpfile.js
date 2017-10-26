@@ -1,7 +1,6 @@
 const elixir = require('laravel-elixir');
 require('laravel-elixir-pug');
 
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
