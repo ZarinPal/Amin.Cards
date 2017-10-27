@@ -13,11 +13,15 @@ require('laravel-elixir-pug');
  */
 
 elixir(function (mix) {
-    mix.webpack(
-        './src/js/app.js',
-        './public/assets/js/app.js'
-    );
-    //
+    // mix.webpack(
+    //     [
+    //         './src/js/app.js',
+    //         './node_modules/jquery/dist/jquery.js',
+    //         // './node_modules/aos/src/js/aos.js',
+    //     ],
+    //     './public/assets/js/app.js'
+    // );
+
     mix.pug(
         {
             // Compile to blade.php files or html files
@@ -46,6 +50,12 @@ elixir(function (mix) {
         sass,
         'public/assets/css/styles.css'
     );
+
+    mix.scripts([
+            './node_modules/jquery/dist/jquery.js',
+            './src/js/app.js',
+        ],
+        './public/assets/js/app.js');
 
     mix.copy('./src/img/', 'public/assets/img/');
 

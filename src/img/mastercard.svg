@@ -1,0 +1,35 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="406" height="246"
+     viewBox="0 0 406 246">
+    <defs>
+        <rect id="mastercard-b" width="360" height="200" rx="15"/>
+        <filter id="mastercard-a" width="123.6%" height="142.5%" x="-11.8%" y="-13.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="11.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0"/>
+        </filter>
+        <polygon id="mastercard-c" points="26.658 0 0 0 0 32.81 26.658 32.81 26.658 0"/>
+        <polygon id="mastercard-e" points="27.068 0 .41 0 .41 32.81 27.068 32.81 27.068 0"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(23 7)">
+        <use fill="#000" filter="url(#mastercard-a)" xlink:href="#mastercard-b"/>
+        <use fill="#FFF" xlink:href="#mastercard-b"/>
+        <g transform="translate(280 142)">
+            <mask id="mastercard-d" fill="#fff">
+                <use xlink:href="#mastercard-c"/>
+            </mask>
+            <path fill="#EA001B"
+                  d="M20.5062471,16.4048992 C20.5062471,11.2274613 22.9112294,6.61599797 26.6581458,3.60977013 C23.8487787,1.35571443 20.2872395,-0.000164050633 16.4049813,-0.000164050633 C7.34528506,-0.000164050633 -8.20253165e-05,7.34438278 -8.20253165e-05,16.4048992 C-8.20253165e-05,25.4654157 7.34528506,32.8099625 16.4049813,32.8099625 C20.2872395,32.8099625 23.8487787,31.4549043 26.6581458,29.2000284 C22.9112294,26.1938005 20.5062471,21.5823372 20.5062471,16.4048992"
+                  mask="url(#mastercard-d)"/>
+            <g transform="translate(26.248)">
+                <mask id="mastercard-f" fill="#fff">
+                    <use xlink:href="#mastercard-e"/>
+                </mask>
+                <path fill="#F79F1A"
+                      d="M10.6632091,-0.000164050633 C6.78095089,-0.000164050633 3.21941165,1.35571443 0.410044557,3.60977013 C4.15696101,6.61599797 6.56194329,11.2274613 6.56194329,16.4048992 C6.56194329,21.5823372 4.15696101,26.1938005 0.410044557,29.2000284 C3.21941165,31.4549043 6.78095089,32.8099625 10.6632091,32.8099625 C19.7237256,32.8099625 27.0682724,25.4654157 27.0682724,16.4048992 C27.0682724,7.34438278 19.7237256,-0.000164050633 10.6632091,-0.000164050633"
+                      mask="url(#mastercard-f)"/>
+            </g>
+            <path fill="#FF5F01"
+                  d="M32.8100446,16.4048992 C32.8100446,11.2274613 30.4050623,6.61599797 26.6581458,3.60977013 C22.9112294,6.61599797 20.5062471,11.2274613 20.5062471,16.4048992 C20.5062471,21.5823372 22.9112294,26.1938005 26.6581458,29.2000284 C30.4050623,26.1938005 32.8100446,21.5823372 32.8100446,16.4048992"/>
+        </g>
+    </g>
+</svg>

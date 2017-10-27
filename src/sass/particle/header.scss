@@ -78,7 +78,7 @@ header {
 
   article {
     position: absolute;
-    top: 48%;
+    top: 30%;
     -webkit-transform: translate(0, -40%);
     transform: translate(0, -40%);
     width: 55%;
@@ -88,7 +88,7 @@ header {
       content: "";
       position: absolute;
       right: 12%;
-      top: 70px;
+      margin-top: 40px;
       height: 5px;
       width: 75px;
       border-bottom: 5px solid #4fd7a5;

@@ -20,5 +20,8 @@
     "pug": "^2.0.0-beta6",
     "sass": "^0.5.0",
     "sass-loader": "^4.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
