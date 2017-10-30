@@ -8,7 +8,7 @@
 @import 'plugins/fonts';
 @import 'plugins/animate';
 @import "../../node_modules/node-normalize-scss/normalize";
-@import "../../node_modules/flexbox-grid-sass/src/flexbox-grid";
+@import "../../node_modules/flexboxgrid-sass/flexboxgrid";
 @import "../../node_modules/font-awesome/scss/font-awesome.scss";
 
 .row {
@@ -19,5 +19,5 @@
 // ======
 //
 @import 'particle/header';
-@import 'particle/footer';
 @import 'particle/stylesheets';
+@import 'particle/responsive';

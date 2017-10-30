@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 .btn {
   border: 1px solid #000;
   border-radius: 20px;
@@ -55,7 +58,6 @@ section {
     li {
       border-radius: 15px;
       float: right;
-      width: 40%;
       min-height: 153px;
       padding: 0;
       margin: 30px auto;
@@ -88,15 +90,6 @@ section {
       }
     }
 
-    li:nth-child(odd) {
-      clear: right;
-      margin-left: 25px;
-    }
-
-    li:nth-child(even) {
-      clear: left;
-      margin-right: 25px;
-    }
 
     li:hover {
       box-shadow: 0 5px 10px 0 rgba(2, 18, 34, 0.1);
@@ -124,7 +117,6 @@ section {
     display: block;
     margin-top: 200px;
     .card {
-      display: inline;
       float: right;
       position: absolute;
       opacity: 0.8;
@@ -132,25 +124,6 @@ section {
       text-align: center;
       @include fadeAnim(0.3s);
     }
-
-    //#card-1{
-    //  background: red;
-    //}
-    //#card-2{
-    //  background: black;
-    //}
-    //#card-3{
-    //  background: blue;
-    //}
-    //#card-4{
-    //  background: yellow;
-    //}
-    //#card-5{
-    //  background: green;
-    //}
-    //#card-6{
-    //  background: gray;
-    //}
   }
 }
 
@@ -207,11 +180,8 @@ section {
 
 #brands {
   padding: 70px;
-  h3 .btn {
-    margin-right: 115px;
-    font-size: 25px;
-    font-weight: 400;
-    border-radius: 50px;
+  h3:after {
+    content: none;
   }
   h3 .btn:hover {
     color: #ffffff;

@@ -42,12 +42,6 @@ header {
 
   nav {
     padding: 30px 50px;
-
-    .logo {
-      float: right;
-      font-size: 38px;
-      margin-top: -17px;
-    }
     .sign-up {
       float: left;
 
@@ -55,30 +49,11 @@ header {
         background: $success-color;
       }
     }
-    .menu {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-          display: inline;
-          float: right;
-          margin-left: 20px;
-          margin-right: 20px;
-        }
-      }
-    }
   }
 
   article {
     position: absolute;
-    top: 30%;
+    top: 40%;
     -webkit-transform: translate(0, -40%);
     transform: translate(0, -40%);
     width: 55%;

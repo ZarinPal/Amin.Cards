@@ -23,6 +23,21 @@ function toggleCardTop(card) {
 
 jQuery(document).ready(function () {
     /**
+     * Responsive menu
+     */
+    jQuery(document).mouseup(function (e) {
+        let container = jQuery(".menu.active");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('active');
+        }
+    });
+    jQuery("#menu-icon").click(function () {
+        jQuery('.menu').addClass('active');
+    });
+    /* ./End of responsive menu */
+    /**
      * Header background movement by mouse over.
      */
     let movementStrength = 100;
@@ -65,6 +80,7 @@ jQuery(document).ready(function () {
         });
         card.find("img").css('width', 100 - (index * 10) + "%");
     });
-
     /* End of card animations */
 });
+
+

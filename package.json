@@ -5,7 +5,6 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
-    "flexbox-grid-sass": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-pug-inheritance": "^0.2.1",
@@ -22,6 +21,7 @@
     "sass-loader": "^4.0.2"
   },
   "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
     "jquery": "^3.2.1"
   }
 }
