@@ -59,6 +59,8 @@ elixir(function (mix) {
 
     mix.copy('./src/img/', 'public/assets/img/');
 
+    mix.copy('./src/plugin/', 'public/assets/plugin/');
+
     mix.copy('./src/img/favicons/', 'public/');
 
     mix.copy('./src/fonts/', 'public/assets/fonts/');

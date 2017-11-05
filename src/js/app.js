@@ -81,6 +81,16 @@ jQuery(document).ready(function () {
         card.find("img").css('width', 100 - (index * 10) + "%");
     });
     /* End of card animations */
+
+    /**
+     * Extra small size
+     */
+    if ($(window).width() <= 750) {
+        console.log("Mobile view");
+        let c = jQuery("#card-details");
+        c.addClass("flexslider");
+        c.find("ul").addClass("slides");
+    }
 });
 
 

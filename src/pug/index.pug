@@ -2,6 +2,28 @@ extends partials/layout.pug
 block project-info
     -var pageName = 'صفحه نخست'
     -var fileName = 'index'
+block css
+    link(rel="stylesheet" href="assets/plugin/scroll-pan/jquery.mCustomScrollbar.min.css")
+    link(rel="stylesheet" href="assets/plugin/flexslider/flexslider.css")
+    link(rel='stylesheet' type="text/css" href ='assets/css/styles.css?ver=1.2.0')
+block js
+    script(src='assets/js/app.js')
+    script(src='assets/plugin/scroll-pan/jquery.mCustomScrollbar.concat.min.js')
+    script(src='assets/plugin/flexslider/jquery.flexslider.js')
+    script
+        |   jQuery(window).on('load', function(){
+        |       jQuery("#scroll-process-items").mCustomScrollbar({
+        |           axis:"x",
+        |           theme:"dark-2",
+        |           advanced:{autoExpandHorizontalScroll:true}
+        |       });
+        |       jQuery('.flexslider').flexslider({
+        |           animation: "slide",
+        |           slideshow: false,
+        |           rtl: true,
+        |           startAt: -1
+        |       });
+        |   });
 block content
     main#home
         section#properties
@@ -10,7 +32,7 @@ block content
             div.row(style="max-width:80%")
                 div.col-xs-12.col-lg-5.center-xs.center-md
                     div.cards-container
-                        div#card-1.card.on-top
+                        div#card-1.card.on-top.active
                             img(src="assets/img/mastercard.svg")
                         div#card-2.card
                             img(src="assets/img/mastercard.svg")
@@ -23,9 +45,9 @@ block content
                         div#card-6.card
                             img(src="assets/img/mastercard.svg")
 
-                div.col-xs-12.col-lg-7.first-lg
+                div#card-details.col-xs-12.col-lg-7.first-lg
                     ul
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-1
+                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6.active#item-1
                             div.panel
                                 span.fa
                                 h4  قابل شارژ به دفعات نامحدود
@@ -37,7 +59,7 @@ block content
                                 h4  نه کمتر نه بیشتر!
                                 p   خرید دلار به قیمت مصوب بانک مرکزی در لحظه. کارمزد وجود داره ولی رو قیمت دلار چیزی اضافه نمیشه.
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6.active#item-3
+                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-3
                             div.panel
                                 span.fa
                                 h4  قابل استفاده در ATM
@@ -64,27 +86,28 @@ block content
         section#processes.border-top-like-triangle
             h3.animated.fadeIn  پس من یه کارت ارزی می‌خوام!
 
-            div.row
-                div.steps#register
-                    div.steps-pic
-                        img(src='assets/img/user.svg')
-                    h4  ثبت نام
-                    p   در یک مرحله‌ی ساده و در چند دقیقه ثبت‌نام کنید. فقط با وارد کردن شماره تماس خود.
-                div.steps#send-dcouments
-                    div.steps-pic
-                        img(src='assets/img/file.svg')
-                    h4  تکمیل و ارسال مدارک
-                    p   در پنل کاربری از شما خواسته می‌شه تا اطلاعات خود را تکمیل کنید و مدارک لازم مثل کپی پاسپورت رو برای ما ارسال کنید.
-                div.steps#send-cart
-                    div.steps-pic
-                        img(src='assets/img/cards.svg')
-                    h4  ارسال کارت
-                    p   سعی می‌کنیم خیلی سریع با یه بسته‌بندی شیک کارت رو براتون ارسال کنیم و اتلاف وقت و هزینه‌ای در این مرحله وجود نداشته باشه.
-                div.steps#finish
-                    div.steps-pic
-                        img(src='assets/img/check.svg')
-                    h4  تمام!
-                    p   حالا می‌تونید کارت‌تون رو شارژ کنید و از خرید کردن باهاش لذت ببرین، تبریک می‌گیم :)
+            div.row#scroll-process-items
+                div#processes-items(data-mcs-theme="dark")
+                    div.steps#register
+                        div.steps-pic
+                            img(src='assets/img/user.svg')
+                        h4  ثبت نام
+                        p   در یک مرحله‌ی ساده و در چند دقیقه ثبت‌نام کنید. فقط با وارد کردن شماره تماس خود.
+                    div.steps#send-dcouments
+                        div.steps-pic
+                            img(src='assets/img/file.svg')
+                        h4  تکمیل و ارسال مدارک
+                        p   در پنل کاربری از شما خواسته می‌شه تا اطلاعات خود را تکمیل کنید و مدارک لازم مثل کپی پاسپورت رو برای ما ارسال کنید.
+                    div.steps#send-cart
+                        div.steps-pic
+                            img(src='assets/img/cards.svg')
+                        h4  ارسال کارت
+                        p   سعی می‌کنیم خیلی سریع با یه بسته‌بندی شیک کارت رو براتون ارسال کنیم و اتلاف وقت و هزینه‌ای در این مرحله وجود نداشته باشه.
+                    div.steps#finish
+                        div.steps-pic
+                            img(src='assets/img/check.svg')
+                        h4  تمام!
+                        p   حالا می‌تونید کارت‌تون رو شارژ کنید و از خرید کردن باهاش لذت ببرین، تبریک می‌گیم :)
 
         section#brands
             h3.animated.fadeIn  برای شروع کار آماده ای؟
