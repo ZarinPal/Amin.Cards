@@ -11,14 +11,15 @@ mix.pug = require('aminkt-laravel-mix-html-pug');
  | file for your application, as well as bundling up your JS files.
  |
  */
-mix.setPublicPath(path.normalize('public/assets'));
-mix.setResourceRoot(path.normalize('public'));
-
-mix.js('./src/js/app.js', 'js');
-
-mix.sass('./src/sass/styles.scss', 'css');
-
-mix.pug(
+mix.setPublicPath(path.normalize('public/assets'))
+    .setResourceRoot(path.normalize('public'))
+    .scripts([
+        './node_modules/jquery/dist/jquery.js',
+        './src/js/app.js'
+    ], 'public/assets/js/app.js')
+    .sass('./src/sass/styles.scss', 'css')
+    .options({processCssUrls: false})
+    .pug(
     'src/pug',
     'public/',
     {
@@ -27,21 +28,11 @@ mix.pug(
         pretty: false
     }
 );
-
 mix.copyDirectory('./src/plugin/', './public/assets/plugin/')
-    .copyDirectory('./src/img/', './public/assets/img/');
+    .copyDirectory('./src/img/', './public/assets/img/')
+    .copyDirectory('./src/fonts/', './public/assets/fonts/')
+    .copyDirectory('./node_modules/font-awesome/fonts', './public/assets/fonts/');
 
-mix.version();
-
-// mix.js('./src/js/app.js', './public/assets/js')
-//     .sass('./src/sass/styles.scss', 'css/styles.css')
-//     .setPublicPath('./public/assets')
-//     .setResourceRoot('../')
-//     .copyDirectory('./src/img/', './public/assets/img/')
-//     .copyDirectory('./src/plugin/', './public/assets/plugin/')
-//     // .copyDirectory('./src/fonts/', './public/assets/fonts/')
-//     // .copyDirectory('./node_modules/font-awesome/fonts', './public/assets/fonts/')
-//     .version();
 
 // Full API
 // mix.js(src, output);
