@@ -19,7 +19,12 @@ mix.pug('src/pug/*.pug', 'public', {seeds:'src/seeds'})
     ], 'public/assets/js/app.js')
     .sass('src/sass/styles.scss', 'public/assets/css')
     .setPublicPath('public/assets')
-    .setResourceRoot('../');
+    .setResourceRoot('../')
+    .browserSync(({
+        proxy: false,
+        port:'8000',
+        server: {baseDir: './public'} // this is the only difference
+    }));
 
 // mix.setPublicPath('dist')
 //     .scripts([

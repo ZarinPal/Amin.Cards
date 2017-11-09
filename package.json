@@ -7,6 +7,8 @@
     "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
     "font-awesome": "^4.7.0",
     "laravel-mix": "1.*",
     "node-normalize-scss": "^3.0.0",
