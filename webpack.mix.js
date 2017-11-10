@@ -20,6 +20,7 @@ mix.pug('src/pug/*.pug', 'public', {seeds:'src/seeds'})
     .sass('src/sass/styles.scss', 'public/assets/css')
     .setPublicPath('public/assets')
     .setResourceRoot('../')
+    .copyDirectory('src/img', 'public/assets/img')
     .browserSync(({
         proxy: false,
         port:'8000',
