@@ -201,9 +201,10 @@ $size: nth($b, 2);
         right: inherit;
         -webkit-transform: inherit;
         transform: inherit;
+
         float: right;
         font-size: 38px;
-        margin-top: 0;
+        margin-top: -17px;
       }
       .menu {
         position: absolute;
@@ -211,7 +212,7 @@ $size: nth($b, 2);
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         right: initial;
-        top: 10px;
+        top: initial;
         bottom: initial;
         background: transparent;
         z-index: initial;
