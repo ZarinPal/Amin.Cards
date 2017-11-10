@@ -332,7 +332,10 @@ section {
   }
 
   #page-icon.info-icon {
-    background: url('../img/information.svg') no-repeat center;
+    background: #ffffff url('../img/information.svg') no-repeat center;
+  }
+  #page-icon.dollar-icon {
+    background: #ffffff url('../img/price.svg') no-repeat center;
   }
 }
 
