@@ -195,6 +195,13 @@ section {
       margin-top: 0;
       text-align: center;
       @include fadeAnim(0.3s);
+
+      svg, img {
+        height: 225px;
+        margin: 0;
+        padding: 0;
+        width: 405px;
+      }
     }
   }
 }
@@ -229,9 +236,10 @@ section {
         margin: 25px auto 55px;
         width: 90px;
         height: 90px;
+        text-align: center;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
-        img {
+        img, svg {
           margin-top: 50%;
           transform: translateY(-50%);
         }
@@ -308,12 +316,12 @@ section {
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.1);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    text-align: center;
 
-    img {
-      margin-right: 50%;
+    img, svg {
       margin-top: 50%;
-      -webkit-transform: translate(50%, -50%);
-      transform: translate(50%, -50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
   }
   #page-icon.fa:before {

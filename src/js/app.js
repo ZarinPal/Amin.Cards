@@ -75,7 +75,7 @@ jQuery(document).ready(function () {
     jQuery("#properties .cards-container .card").each(function (index, element) {
         let card = jQuery(element);
         card.css({
-            'margin-top': 45 * index + 'px',
+            'margin-top': 25 * index + 'px',
             'z-index': zIndexOfCards--,
         });
         card.find("img").css('width', 100 - (index * 10) + "%");

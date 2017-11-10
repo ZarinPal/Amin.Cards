@@ -8,6 +8,7 @@ Extra small size rules.
 #menu-icon {
   font-size: 2.5em;
   float: right;
+  margin-top: -15px;
 }
 
 .social {
@@ -196,6 +197,7 @@ $size: nth($b, 2);
   }
   header {
     nav {
+
       .logo {
         position: inherit;
         right: inherit;
@@ -204,7 +206,7 @@ $size: nth($b, 2);
 
         float: right;
         font-size: 38px;
-        margin-top: -17px;
+        margin-top: -10px;
       }
       .menu {
         position: absolute;
@@ -212,7 +214,7 @@ $size: nth($b, 2);
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         right: initial;
-        top: initial;
+        top: 10px;
         bottom: initial;
         background: transparent;
         z-index: initial;
