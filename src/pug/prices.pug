@@ -4,7 +4,8 @@ block project-info
     -var fileName = 'prices'
 block content
     main#page
-        span#page-icon.dollar-icon
+        span#page-icon
+            include ../img/price.svg
         h2  تعرفه ها
 
         div.row.page-description
@@ -12,9 +13,9 @@ block content
 
         section#prices
             div.row
-                div.col-xs-12.col-sm-12.col-md-5
+                div.col-xs-12.col-md-5
                     h4  محدودیت‌های پرداخت *
-                div.col-xs-12.col-sm-12.col-md-7
+                div.col-xs-12.col-md-7
                     table
                         thead
                             tr
@@ -40,9 +41,9 @@ block content
             <br/><br/><br/>
 
             div.row
-                div.col-xs-12.col-sm-12.col-md-5
+                div.col-xs-12.col-md-5
                     h4  کارمزدها *
-                div.col-xs-12.col-sm-12.col-md-7
+                div.col-xs-12.col-md-7
                     table
                         thead
                             tr
