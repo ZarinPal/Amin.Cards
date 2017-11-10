@@ -230,11 +230,7 @@ section {
         width: 90px;
         height: 90px;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-
-        img {
-          margin-top: 50%;
-          transform: translateY(-50%);
-        }
+        background-size: 3em;
       }
     }
 
@@ -252,6 +248,19 @@ section {
 
     .steps:last-child:before {
       content: none;
+    }
+
+    #register .steps-pic {
+      background: url('../img/user.svg') no-repeat center;
+    }
+    #send-dcouments .steps-pic {
+      background: url('../img/file.svg') no-repeat center;
+    }
+    #send-cart .steps-pic {
+      background: url('../img/cards.svg') no-repeat center;
+    }
+    #finish .steps-pic {
+      background: url('../img/check.svg') no-repeat center;
     }
   }
 }
@@ -320,6 +329,10 @@ section {
     background: -webkit-linear-gradient($main-color, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  #page-icon.info-icon {
+    background: url('../img/information.svg') no-repeat center;
   }
 }
 
