@@ -4,10 +4,12 @@ header.intro.border-bottom-like-triangle
             div(class='arzino')
                 include ../../img/logo.svg
 
-        div#menu-icon
+        div#menu-icon(onclick="document.querySelector('.menu').classList += ' active';")
             span.fa.fa-bars
 
         div(class='menu')
+            div#menu-icon-close(onclick="document.querySelector('.menu').classList = 'menu';")
+                span.fa.fa-times
             ul
                 li
                     a(href="/")    خانه

@@ -1,23 +1,22 @@
-<svg width="1407" height="785" viewBox="0 0 1407 785">
-    <title>Circle</title>
-    <defs>
-        <linearGradient id="circle2-a" x1="-20.872%" y1="116.592%" y2="0%">
-            <stop offset="0%" stop-color="#2541B2"/>
-            <stop offset="100%" stop-color="#38B8F2"/>
-        </linearGradient>
-        <filter id="circle2-b" width="119.9%" height="119.9%" filterUnits="objectBoundingBox">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="6.903"/>
-        </filter>
-        <linearGradient id="circle2-c" x1="-32.119%" y1="133.056%" y2="0%">
-            <stop offset="0%" stop-color="#2541B2"/>
-            <stop offset="100%" stop-color="#38B8F2"/>
-        </linearGradient>
-        <filter id="circle2-d" width="122.5%" height="122.5%" x="-11.3%" y="-11.3%" filterUnits="objectBoundingBox">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="5.184"/>
-        </filter>
-    </defs>
-    <g fill="none" fill-rule="evenodd" transform="translate(13 13)">
-        <circle cx="1273" cy="651" r="104" fill="url(#circle2-a)" filter="url(#circle2-b)" opacity=".71"/>
-        <circle cx="69" cy="69" r="69" fill="url(#circle2-c)" filter="url(#circle2-d)"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1407" height="785" viewBox="0 0 1407 785">
+  <defs>
+    <linearGradient id="circle2-a" x1="-20.872%" y1="116.592%" y2="0%">
+      <stop offset="0%" stop-color="#2541B2"/>
+      <stop offset="100%" stop-color="#38B8F2"/>
+    </linearGradient>
+    <filter id="circle2-b" width="119.9%" height="119.9%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6.903"/>
+    </filter>
+    <linearGradient id="circle2-c" x1="-32.119%" y1="133.056%" y2="0%">
+      <stop offset="0%" stop-color="#2541B2"/>
+      <stop offset="100%" stop-color="#38B8F2"/>
+    </linearGradient>
+    <filter id="circle2-d" width="122.5%" height="122.5%" x="-11.3%" y="-11.3%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5.184"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(13 13)">
+    <circle cx="1273" cy="651" r="104" fill="url(#circle2-a)" filter="url(#circle2-b)" opacity=".71"/>
+    <circle cx="69" cy="69" r="69" fill="url(#circle2-c)" filter="url(#circle2-d)"/>
+  </g>
 </svg>

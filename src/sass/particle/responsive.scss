@@ -9,6 +9,15 @@ Extra small size rules.
   font-size: 2.5em;
   float: right;
   margin-top: -15px;
+  cursor: pointer;
+}
+#menu-icon-close{
+  float: right;
+  font-size: 1.6em;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  cursor: pointer;
 }
 
 .social {
@@ -30,7 +39,7 @@ header {
       transform: translateX(50%);
     }
     .menu.active {
-      width: 60%;
+      right: 0;
 
       li {
         padding: 5px;
@@ -43,14 +52,15 @@ header {
     .menu {
       position: absolute;
       display: table;
-      right: 0;
+      overflow: hidden;
+      right: -60%;
       top: 0;
       bottom: 0;
       height: 100vh;
       background: #373737;
       z-index: 25000;
       text-align: center;
-      width: 0;
+      width: 60%;
       padding-top: 60px;
       font-size: 1.8em;
       @include fadeAnim(0.5s);
@@ -190,6 +200,9 @@ $b: nth($breakpoints, 2);
 $size: nth($b, 2);
 @media only screen and (min-width: $size) {
   #menu-icon {
+    display: none;
+  }
+  #menu-icon-close{
     display: none;
   }
   #login {

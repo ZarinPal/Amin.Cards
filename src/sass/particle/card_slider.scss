@@ -1,0 +1,38 @@
+.card-slider{
+    overflow-x: hidden;
+
+  ul{
+    @include fadeAnim(1s);
+  }
+}
+.slider-navigator{
+  .next-btn{
+    display: inline;
+    float: left;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    margin-top: 75px;
+    margin-left: 25px;
+    font-size: 3em;
+    color: #717171;
+    cursor: pointer;
+  }
+
+  .pre-btn{
+    display: inline;
+    float: right;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    margin-top: 75px;
+    margin-right: 25px;
+    font-size: 3em;
+    color: #717171;
+    cursor: pointer;
+  }
+
+  .pre-btn:hover, .next-btn:hover{
+    color: #3c3c3c;
+  }
+}

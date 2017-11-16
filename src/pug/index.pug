@@ -3,27 +3,11 @@ block project-info
     -var pageName = 'صفحه نخست'
     -var fileName = 'index'
 block css
-    link(rel="stylesheet" href="/assets/plugin/scroll-pan/jquery.mCustomScrollbar.min.css")
-    link(rel="stylesheet" href="/assets/plugin/flexslider/flexslider.css")
     link(rel="stylesheet" type="text/css" href ="/assets/css/styles.css")
 block js
     script(src='/assets/js/app.js')
-    script(src='/assets/plugin/scroll-pan/jquery.mCustomScrollbar.concat.min.js')
-    script(src='/assets/plugin/flexslider/jquery.flexslider.js')
     script
-        |   jQuery(window).on('load', function(){
-        |       jQuery("#scroll-process-items").mCustomScrollbar({
-        |           axis:"x",
-        |           theme:"dark-2",
-        |           advanced:{autoExpandHorizontalScroll:true}
-        |       });
-        |       jQuery('.flexslider').flexslider({
-        |           animation: "slide",
-        |           slideshow: false,
-        |           rtl: true,
-        |           startAt: -1
-        |       });
-        |   });
+        |   var ps = new PerfectScrollbar('#scroll-process-items');
 block content
     main#home
         section#properties
@@ -46,48 +30,49 @@ block content
                             include ../img/mastercard.svg
 
                 div#card-details.col-xs-12.col-lg-7.first-lg
-                    ul
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6.active#item-1
-                            div.panel
-                                span.fa
-                                h4  قابل شارژ به دفعات نامحدود
-                                p   ورود به پنل کاربری و دسترسی به اینترنت، همین دو مورد کافیه تا با یه کارت شتابی کارت ارزی‌تون رو شارژ کنید .
+                    div.item-small-slider
+                        ul
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6.active#item-1
+                                div.panel
+                                    span.fa
+                                    h4  قابل شارژ به دفعات نامحدود
+                                    p   ورود به پنل کاربری و دسترسی به اینترنت، همین دو مورد کافیه تا با یه کارت شتابی کارت ارزی‌تون رو شارژ کنید .
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-2
-                            div.panel
-                                span.fa
-                                h4  نه کمتر نه بیشتر!
-                                p   خرید دلار به قیمت مصوب بانک مرکزی در لحظه. کارمزد وجود داره ولی رو قیمت دلار چیزی اضافه نمیشه.
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-2
+                                div.panel
+                                    span.fa
+                                    h4  نه کمتر نه بیشتر!
+                                    p   خرید دلار به قیمت مصوب بانک مرکزی در لحظه. کارمزد وجود داره ولی رو قیمت دلار چیزی اضافه نمیشه.
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-3
-                            div.panel
-                                span.fa
-                                h4  قابل استفاده در ATM
-                                p   در هر نقطه‌ از جهان می‌تونید از این کارت در دستگاه‌های خودپرداز استفاده کنید و...
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-3
+                                div.panel
+                                    span.fa
+                                    h4  قابل استفاده در ATM
+                                    p   در هر نقطه‌ از جهان می‌تونید از این کارت در دستگاه‌های خودپرداز استفاده کنید و...
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-4
-                            div.panel
-                                span.fa
-                                h4  خرید از دستگاه POS
-                                p   تو هر فروشگاهی که دوست دارین خرید کنید و هنگام پرداخت نگرانی خاصی برای پرداخت مبلغ خریداری شده‌تون نداشته باشید.
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-4
+                                div.panel
+                                    span.fa
+                                    h4  خرید از دستگاه POS
+                                    p   تو هر فروشگاهی که دوست دارین خرید کنید و هنگام پرداخت نگرانی خاصی برای پرداخت مبلغ خریداری شده‌تون نداشته باشید.
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-5
-                            div.panel
-                                span.fa
-                                h4  اینترنت بانک
-                                p   با وجود اینترنت بانک هرلحظه و هرجا این امکان براتون فراهم هست تا تراکنش‌های انجام شده‌تون رو مدیریت کنید.
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-5
+                                div.panel
+                                    span.fa
+                                    h4  اینترنت بانک
+                                    p   با وجود اینترنت بانک هرلحظه و هرجا این امکان براتون فراهم هست تا تراکنش‌های انجام شده‌تون رو مدیریت کنید.
 
-                        li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-6
-                            div.panel
-                                span.fa
-                                h4  خرید آنلاین
-                                p   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            li.col-xs-12.col-sm-6.col-md-4.col-lg-6#item-6
+                                div.panel
+                                    span.fa
+                                    h4  خرید آنلاین
+                                    p   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
 
         section#processes.border-top-like-triangle
             h3.animated.fadeIn  پس من یه کارت ارزی می‌خوام!
 
             div.row#scroll-process-items
-                div#processes-items(data-mcs-theme="dark")
+                div#processes-items
                     div.steps#register
                         div.steps-pic
                             include ../img/user.svg

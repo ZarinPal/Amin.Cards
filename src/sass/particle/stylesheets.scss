@@ -217,6 +217,13 @@ section {
     padding-top: 50px;
     max-width: 95% !important;
   }
+  .ps__rail-x{
+    display: none;
+  }
+  #scroll-process-items{
+    position: relative;
+    overflow: auto;
+  }
 
   #processes-items {
     margin: 0 auto;
@@ -258,7 +265,7 @@ section {
       right: 170px;
     }
 
-    .steps:last-child:before {
+    .steps:last-child:before, .steps#finish:before {
       content: none;
     }
   }
