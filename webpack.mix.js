@@ -14,7 +14,6 @@ mix.pug = require('laravel-mix-pug');
 
 mix.pug('src/pug/*.pug', 'public', {seeds:'src/seeds'})
     .scripts([
-        'node_modules/jquery/dist/jquery.js',
         'node_modules/perfect-scrollbar/dist/perfect-scrollbar.js',
         'src/js/card_slider.js',
         'src/js/app.js'

@@ -3,70 +3,51 @@
  */
 
 function toggleCardTop(card) {
-    let topCard = jQuery(".card.on-top");
-    let selectedCard = jQuery(card);
-    let topCardImg = topCard.find('img');
-    let selectedCardImg = selectedCard.find('img');
+    let topCard = document.querySelector(".card.on-top");
+    let selectedCard = document.querySelector(card);
+    let topCardImg = topCard.querySelector('svg');
+    let selectedCardImg = selectedCard.querySelector('svg');
 
-    let tempStyle = selectedCard.attr('style');
-    let tempImgStyle = selectedCardImg.attr('style');
+    let tempStyle = selectedCard.getAttribute('style');
+    let tempImgStyle = selectedCardImg.getAttribute('style');
 
-    selectedCard.attr('style', topCard.attr('style'));
-    topCard.attr('style', tempStyle);
+    selectedCard.setAttribute('style', topCard.getAttribute('style'));
+    topCard.setAttribute('style', tempStyle);
 
-    selectedCardImg.attr('style', topCardImg.attr('style'));
-    topCardImg.attr('style', tempImgStyle);
+    selectedCardImg.setAttribute('style', topCardImg.getAttribute('style'));
+    topCardImg.setAttribute('style', tempImgStyle);
 
-    topCard.removeClass('on-top');
-    selectedCard.addClass('on-top');
+    topCard.classList.remove('on-top');
+    selectedCard.classList.add('on-top');
 }
 
-jQuery(document).ready(function () {
-    /**
-     * Header background movement by mouse over.
-     */
-    let movementStrength = 100;
-    let height = movementStrength / jQuery(window).height();
-    let width = movementStrength / jQuery(window).width();
-    jQuery("header").mousemove(function (e) {
-        let pageX = e.pageX - (jQuery(window).width() / 2);
-        let pageY = e.pageY - (jQuery(window).height() / 2);
-        let newvalueX1 = width * pageX * -1 + 300;
-        let newvalueY1 = height * pageY * -1 - 25;
-        let newvalueX2 = width * pageX * +1 + 30;
-        let newvalueY2 = height * pageY * +1 + 25;
-        jQuery('header').css("background-position", newvalueX1 + "px " + newvalueY1 + "px, " + newvalueX2 + "px " + newvalueY2 + "px, center");
-    });
-    /* ./End header movement action. */
 
+/**
+ * Cards animation codes
+ */
+let zIndexOfCards = 1000;
+let cards = document.querySelectorAll("#properties .cards-container .card");
+for (let index = 0; index < cards.length; index++) {
+    cards[index].style.marginTop = 25 * index + 'px';
+    cards[index].style.zIndex = zIndexOfCards--;
 
-    /**
-     * Card properties active and un active action.
-     */
-    jQuery("#properties li").click(function () {
-        let element = jQuery(this);
-        jQuery("#properties li.active").removeClass('active');
-        element.addClass('active');
-        let id = element.attr('id').split('-');
-        id = id[1];
-        toggleCardTop("#properties .cards-container .card#card-" + id);
-    });
-    /* End of card activation */
+    cards[index].querySelector('svg').style.width = 100 - (index * 10) + "%";
+}
+/* End of card animations */
 
-    /**
-     * Cards animation codes
-     */
-    let zIndexOfCards = 1000;
-    jQuery("#properties .cards-container .card").each(function (index, element) {
-        let card = jQuery(element);
-        card.css({
-            'margin-top': 25 * index + 'px',
-            'z-index': zIndexOfCards--,
-        });
-        card.find("img").css('width', 100 - (index * 10) + "%");
-    });
-    /* End of card animations */
-});
+let movementStrength = 100;
+let height = movementStrength / window.innerHeight;
+let width = movementStrength / window.innerWidth;
+
+function headerAnimations(event) {
+    let pageX = event.clientX - (window).innerWidth / 2;
+    let pageY = event.clientY - (window.innerHeight / 2);
+    let newvalueX1 = width * pageX * -1 + 300;
+    let newvalueY1 = height * pageY * -1 - 25;
+    let newvalueX2 = width * pageX * +1 + 30;
+    let newvalueY2 = height * pageY * +1 + 25;
+    document.querySelector('header').setAttribute('style', "background-position:" + newvalueX1 + "px " + newvalueY1 + "px, " + newvalueX2 + "px " + newvalueY2 + "px, center");
+}
 
 /**
 * Extra small size
@@ -76,4 +57,17 @@ if(window.innerWidth <= 750){
     console.log("Mobile view");
     let slider = new CardSlider("#properties #card-details .item-small-slider");
 }
+
+/**
+ * Card properties active and un active action.
+ */
+function activeCard(card) {
+    document.querySelector("#properties li.active").classList.remove('active');
+    card.classList.add('active');
+    let id = card.getAttribute('id').split('-');
+    id = id[1];
+    toggleCardTop("#properties .cards-container .card#card-" + id);
+}
+
+/* End of card activation */
 

@@ -27,6 +27,7 @@ header {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 65%, cover, 100%;
   color: #ffffff;
+  @include fadeAnim(0.5s);
 
   a {
     color: #fff;
